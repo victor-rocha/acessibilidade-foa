@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+    <title>Accessibility</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,17 +16,21 @@
           <div class="blog-masthead">
             <div class="container">
               <nav class="nav">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
                 <a class="nav-link" href="#">New features</a>
                 <a class="nav-link" href="#">Press</a>
                 <a class="nav-link" href="#">New hires</a>
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="contact.html">Contact</a>
               </nav>
             </div>
           </div>
     
           <div class="blog-header">
-            <div class="container">
+            <div class="container" id="teste">
+                    <a class="jfontsize-button" id="jfontsize-m2">A-</a>
+                    <a class="jfontsize-button" id="jfontsize-d2">A</a>
+                    <a class="jfontsize-button" id="jfontsize-p2">A+</a>
+                    <img src="img/bandeira-brasil.png" alt="Bandeira do Brasil" title="Bandeira do Brasil" class="bandeira">
               <h1 class="blog-title">The Bootstrap Blog</h1>
               <p class="lead blog-description">An example blog template built with Bootstrap.</p>
             </div>
@@ -150,7 +154,18 @@
     </body>
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="js/jquery.jfontsize-1.0.js"></script>
     <script src="js/bootstrap.min.js" ></script>
+    <script type="text/javascript" language="javascript">
+        $('.blog-title').jfontsize({
+            btnMinusClasseId: '#jfontsize-m2', // Defines the class or id of the decrease button
+            btnDefaultClasseId: '#jfontsize-d2', // Defines the class or id of default size button
+            btnPlusClasseId: '#jfontsize-p2', // Defines the class or id of the increase button
+            btnMinusMaxHits: 10, // How many times the size can be decreased
+            btnPlusMaxHits: 10, // How many times the size can be increased
+            sizeChange: 5 // Defines the range of change in pixels
+        });
+</script> 
 </body>
 
 </html>
